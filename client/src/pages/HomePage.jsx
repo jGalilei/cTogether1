@@ -1,5 +1,6 @@
 import illustration from "@/assets/illustration.svg"
 import FormComponent from "@/components/forms/FormComponent"
+import Footer from "@/components/common/Footer";
 
 function HomePage() {
     return (
@@ -16,6 +17,7 @@ function HomePage() {
                     <FormComponent />
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

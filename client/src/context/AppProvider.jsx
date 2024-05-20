@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import { AppContextProvider } from "./AppContext.jsx"
+import { ChatContextProvider } from "./ChatContext.jsx"
 import { FileContextProvider } from "./FileContext.jsx"
 import { SettingContextProvider } from "./SettingContext.jsx"
 import { SocketProvider } from "./SocketContext.jsx"
@@ -14,7 +15,9 @@ function AppProvider({ children }) {
                     <TabContextProvider>
                         <FileContextProvider>
                             <RunCodeContextProvider>
+                                <ChatContextProvider>
                                     {children}
+                                </ChatContextProvider>
                             </RunCodeContextProvider>
                         </FileContextProvider>
                     </TabContextProvider>

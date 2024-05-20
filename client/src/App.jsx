@@ -12,7 +12,7 @@ function App() {
                     <Route path="/editor/:roomId" element={<EditorPage />} />
                 </Routes>
             </Router>
-            <Toast /> {/* Toast component from react-hot-toast */}
+            <Toast /> 
         </>
     )
 }

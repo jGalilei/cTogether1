@@ -25,7 +25,6 @@ function SettingsTab() {
     const handleLanguageChange = (e) => setLanguage(e.target.value)
     const handleFontSizeChange = (e) => setFontSize(e.target.value)
 
-
     useEffect(() => {
         // Set editor font family
         const editor = document.querySelector(".cm-editor > .cm-scroller")

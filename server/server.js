@@ -114,6 +114,12 @@ io.on("connection", (socket) => {
 		socket.broadcast.to(roomId).emit(ACTIONS.USER_ONLINE, { socketId })
 	})
 
+	// Handle chat actions
+	socket.on(ACTIONS.SEND_MESSAGE, ({ message }) => {
+		const roomId = getRoomId(socket.id)
+		socket.broadcast.to(roomId).emit(ACTIONS.RECEIVE_MESSAGE, { message })
+	})
+
 	// Handle cursor position
 	socket.on(ACTIONS.TYPING_START, ({ cursorPosition }) => {
 		userSocketMap = userSocketMap.map((user) => {

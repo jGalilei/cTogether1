@@ -10,6 +10,7 @@ const ACTIONS = {
     FILE_DELETED: "file-deleted",
     USER_OFFLINE: "offline",
     USER_ONLINE: "online",
+    SEND_MESSAGE: "send-message",
     RECEIVE_MESSAGE: "receive-message",
     TYPING_START: "typing-start",
     TYPING_PAUSE: "typing-pause",

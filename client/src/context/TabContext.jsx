@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import { createContext, useState } from "react"
-import { Files, Users, Gear, Play } from "@phosphor-icons/react"
+import { Files, Users, Gear, Chats, Play } from "@phosphor-icons/react"
+import ChatsTab from "@/components/tabs/ChatsTab"
 import UsersTab from "@/components/tabs/UsersTab"
 import FilesTab from "@/components/tabs/FilesTab"
 import SettingsTab from "@/components/tabs/SettingsTab"
@@ -18,12 +19,14 @@ function TabContextProvider({ children }) {
         [TABS.FILES]: <FilesTab />,
         [TABS.CLIENTS]: <UsersTab />,
         [TABS.SETTINGS]: <SettingsTab />,
+        [TABS.CHATS]: <ChatsTab />,
         [TABS.RUN]: <RunTab />,
     })
     const tabIcons = {
         [TABS.FILES]: <Files size={32} />,
         [TABS.CLIENTS]: <Users size={30} />,
         [TABS.SETTINGS]: <Gear size={30} />,
+        [TABS.CHATS]: <Chats size={32} />,
         [TABS.RUN]: <Play size={28} weight="bold" />,
     }
 

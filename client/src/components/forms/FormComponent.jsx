@@ -5,7 +5,6 @@ import UserStatus from "@/utils/status"
 import { useEffect, useRef } from "react"
 import { toast } from "react-hot-toast"
 import { useLocation, useNavigate } from "react-router-dom"
-import { v4 as uuidv4 } from "uuid"
 
 function FormComponent() {
     const location = useLocation()
@@ -81,15 +80,15 @@ function FormComponent() {
 
     return (
         <div className="flex w-full max-w-[500px] flex-col items-center justify-center gap-4 p-4 sm:w-[500px] sm:p-8">
-            <h1 className="text-4xl sm:text-5xl"> Ctogether </h1>
+            <h1 className="text-4xl sm:text-5xl">cTogether</h1>
             <p className="mb-4 text-center md:mb-8">
-                {"Let's code"}
+                {"Let's code."}
             </p>
             <form onSubmit={joinRoom} className="flex w-full flex-col gap-4">
                 <input
                     type="text"
                     name="roomId"
-                    placeholder="Room Id"
+                    placeholder="Enter Room Id"
                     className="w-full rounded-md border border-gray-500 bg-darkHover px-3 py-3 focus:outline-none"
                     onChange={handleInputChanges}
                     value={currentUser.roomId}
@@ -97,7 +96,7 @@ function FormComponent() {
                 <input
                     type="text"
                     name="username"
-                    placeholder="Username"
+                    placeholder="Enter Username"
                     className="w-full rounded-md border border-gray-500 bg-darkHover px-3 py-3 focus:outline-none"
                     onChange={handleInputChanges}
                     value={currentUser.username}

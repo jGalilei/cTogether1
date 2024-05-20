@@ -1,4 +1,4 @@
-import { SignOut } from "@phosphor-icons/react"
+import {SignOut } from "@phosphor-icons/react"
 import { useNavigate } from "react-router-dom"
 import Users from "@/components/common/Users"
 import useWindowDimensions from "@/hooks/useWindowDimensions"
